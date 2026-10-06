@@ -1,0 +1,1702 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>
+        Asosciaciones Literales SAS | Orientación sobre tarjetas y pagos
+    </title>
+
+    <meta
+        name="description"
+        content="Servicio independiente de orientación para consultas relacionadas con pagos, compras rechazadas, cargos no reconocidos y uso de tarjetas en Argentina y Perú."
+    >
+
+    <meta name="robots" content="index, follow">
+
+    <style>
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --primary: #183b62;
+            --primary-dark: #102a46;
+            --secondary: #f5f8fc;
+            --white: #ffffff;
+            --text: #1d2939;
+            --muted: #667085;
+            --border: #dce3eb;
+            --green: #1b8f51;
+            --green-dark: #13733e;
+            --warning: #fff8e8;
+            --warning-border: #e8ce88;
+            --danger-soft: #fff3f2;
+            --max-width: 1140px;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family:
+                Arial,
+                Helvetica,
+                sans-serif;
+
+            color: var(--text);
+            background: var(--white);
+            line-height: 1.65;
+        }
+
+        a {
+            color: inherit;
+        }
+
+        .container {
+            width: min(92%, var(--max-width));
+            margin: auto;
+        }
+
+        /* HEADER */
+
+        header {
+            background: #ffffff;
+            border-bottom: 1px solid var(--border);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .navbar {
+            min-height: 72px;
+
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+
+            gap: 30px;
+        }
+
+        .brand {
+            text-decoration: none;
+            color: var(--primary-dark);
+            font-size: 20px;
+            font-weight: 800;
+        }
+
+        .nav-links {
+            display: flex;
+            align-items: center;
+            gap: 24px;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: var(--text);
+            font-size: 14px;
+            font-weight: 600;
+        }
+
+        .nav-links a:hover {
+            color: var(--primary);
+        }
+
+        /* HERO */
+
+        .hero {
+            background:
+                linear-gradient(
+                    135deg,
+                    #f8fbff 0%,
+                    #edf4fb 100%
+                );
+
+            padding: 84px 0;
+        }
+
+        .hero-grid {
+            display: grid;
+            grid-template-columns: 1.15fr .85fr;
+            gap: 58px;
+            align-items: center;
+        }
+
+        .tag {
+            display: inline-block;
+
+            background: #e7f0fa;
+            color: var(--primary);
+
+            border-radius: 100px;
+
+            padding: 7px 14px;
+
+            font-size: 13px;
+            font-weight: 700;
+
+            margin-bottom: 18px;
+        }
+
+        h1 {
+            font-size: clamp(36px, 5vw, 58px);
+            line-height: 1.08;
+
+            letter-spacing: -1.4px;
+
+            color: var(--primary-dark);
+
+            margin-bottom: 22px;
+        }
+
+        .hero-text {
+            color: var(--muted);
+            font-size: 18px;
+
+            max-width: 700px;
+
+            margin-bottom: 28px;
+        }
+
+        .buttons {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px;
+        }
+
+        .btn {
+            min-height: 52px;
+
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+
+            padding: 0 24px;
+
+            border-radius: 9px;
+
+            text-decoration: none;
+
+            font-weight: 700;
+
+            transition: .2s ease;
+        }
+
+        .btn-whatsapp {
+            background: var(--green);
+            color: white;
+        }
+
+        .btn-whatsapp:hover {
+            background: var(--green-dark);
+            transform: translateY(-1px);
+        }
+
+        .btn-secondary {
+            background: white;
+
+            border: 1px solid var(--border);
+
+            color: var(--primary-dark);
+        }
+
+        .hero-small {
+            font-size: 13px;
+            color: var(--muted);
+
+            margin-top: 14px;
+        }
+
+        .hero-card {
+            background: white;
+
+            border: 1px solid var(--border);
+
+            border-radius: 18px;
+
+            padding: 30px;
+
+            box-shadow:
+                0 20px 60px
+                rgba(17, 45, 75, .08);
+        }
+
+        .hero-card h2 {
+            font-size: 23px;
+
+            color: var(--primary-dark);
+
+            margin-bottom: 18px;
+        }
+
+        .check-list {
+            list-style: none;
+
+            display: grid;
+            gap: 14px;
+        }
+
+        .check-list li {
+            display: flex;
+            align-items: flex-start;
+            gap: 11px;
+
+            color: var(--muted);
+        }
+
+        .check {
+            color: var(--green);
+            font-weight: bold;
+        }
+
+        /* IMPORTANT NOTICE */
+
+        .top-disclaimer {
+            background: var(--warning);
+
+            border-top: 1px solid var(--warning-border);
+            border-bottom: 1px solid var(--warning-border);
+
+            padding: 18px 0;
+
+            font-size: 14px;
+        }
+
+        .top-disclaimer strong {
+            color: #574819;
+        }
+
+        /* SECTIONS */
+
+        section {
+            padding: 76px 0;
+        }
+
+        .section-title {
+            max-width: 760px;
+
+            margin-bottom: 38px;
+        }
+
+        .section-title h2 {
+            color: var(--primary-dark);
+
+            font-size: clamp(29px, 4vw, 42px);
+
+            line-height: 1.2;
+
+            margin-bottom: 12px;
+        }
+
+        .section-title p {
+            color: var(--muted);
+            font-size: 17px;
+        }
+
+        /* SERVICES */
+
+        .services {
+            background: var(--secondary);
+        }
+
+        .cards {
+            display: grid;
+            grid-template-columns:
+                repeat(3, 1fr);
+
+            gap: 20px;
+        }
+
+        .card {
+            background: white;
+
+            border: 1px solid var(--border);
+
+            border-radius: 14px;
+
+            padding: 26px;
+        }
+
+        .card h3 {
+            color: var(--primary-dark);
+
+            font-size: 19px;
+
+            margin-bottom: 9px;
+        }
+
+        .card p {
+            color: var(--muted);
+            font-size: 15px;
+        }
+
+        /* SECURITY */
+
+        .security-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+
+            gap: 25px;
+        }
+
+        .security-box {
+            border: 1px solid var(--border);
+
+            border-radius: 14px;
+
+            padding: 28px;
+        }
+
+        .security-box h3 {
+            color: var(--primary-dark);
+
+            margin-bottom: 14px;
+        }
+
+        .security-box ul {
+            padding-left: 20px;
+            color: var(--muted);
+        }
+
+        .security-box li {
+            margin-bottom: 9px;
+        }
+
+        .danger {
+            background: var(--danger-soft);
+        }
+
+        /* PROCESS */
+
+        .steps {
+            display: grid;
+            grid-template-columns:
+                repeat(3, 1fr);
+
+            gap: 22px;
+        }
+
+        .step {
+            border: 1px solid var(--border);
+
+            padding: 26px;
+
+            border-radius: 14px;
+        }
+
+        .step-number {
+            width: 38px;
+            height: 38px;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            border-radius: 50%;
+
+            background: var(--primary);
+            color: white;
+
+            font-weight: bold;
+
+            margin-bottom: 15px;
+        }
+
+        .step h3 {
+            color: var(--primary-dark);
+
+            margin-bottom: 8px;
+        }
+
+        .step p {
+            color: var(--muted);
+            font-size: 15px;
+        }
+
+        /* CONTACT */
+
+        .contact {
+            background: var(--primary-dark);
+            color: white;
+        }
+
+        .contact-content {
+            max-width: 780px;
+            margin: auto;
+            text-align: center;
+        }
+
+        .contact h2 {
+            font-size: clamp(30px, 4vw, 42px);
+            margin-bottom: 14px;
+        }
+
+        .contact p {
+            color: #d6e3ef;
+
+            font-size: 17px;
+
+            margin-bottom: 25px;
+        }
+
+        /* FAQ */
+
+        .faq {
+            background: var(--secondary);
+        }
+
+        .faq-item {
+            background: white;
+
+            border: 1px solid var(--border);
+
+            padding: 23px;
+
+            border-radius: 12px;
+
+            margin-bottom: 13px;
+        }
+
+        .faq-item h3 {
+            color: var(--primary-dark);
+
+            margin-bottom: 7px;
+
+            font-size: 17px;
+        }
+
+        .faq-item p {
+            color: var(--muted);
+            font-size: 15px;
+        }
+
+        /* LEGAL */
+
+        .legal {
+            background: white;
+        }
+
+        .legal-content {
+            max-width: 900px;
+        }
+
+        .legal-content h2 {
+            color: var(--primary-dark);
+
+            font-size: 30px;
+
+            margin-bottom: 20px;
+        }
+
+        .legal-content h3 {
+            margin-top: 30px;
+            margin-bottom: 10px;
+
+            color: var(--primary-dark);
+        }
+
+        .legal-content p {
+            color: var(--muted);
+
+            margin-bottom: 12px;
+
+            font-size: 14px;
+        }
+
+        .company-data {
+            background: var(--secondary);
+
+            border: 1px solid var(--border);
+
+            border-radius: 12px;
+
+            padding: 24px;
+
+            margin: 20px 0 28px;
+        }
+
+        .company-data p {
+            margin-bottom: 8px;
+        }
+
+        /* FOOTER */
+
+        footer {
+            background: #0a1725;
+
+            color: #cdd6df;
+
+            padding: 35px 0;
+        }
+
+        .footer-grid {
+            display: flex;
+
+            justify-content: space-between;
+
+            gap: 30px;
+
+            font-size: 13px;
+        }
+
+        .footer-links {
+            display: flex;
+            gap: 15px;
+            flex-wrap: wrap;
+        }
+
+        .footer-links a {
+            color: white;
+        }
+
+        /* FLOATING WHATSAPP */
+
+        .floating-whatsapp {
+            position: fixed;
+
+            right: 20px;
+            bottom: 20px;
+
+            min-width: 58px;
+            height: 58px;
+
+            padding: 0 18px;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            border-radius: 100px;
+
+            background: var(--green);
+            color: white;
+
+            text-decoration: none;
+
+            font-size: 14px;
+            font-weight: bold;
+
+            box-shadow:
+                0 8px 24px
+                rgba(0,0,0,.2);
+
+            z-index: 100;
+        }
+
+        @media(max-width: 850px) {
+
+            .hero-grid,
+            .security-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .cards,
+            .steps {
+                grid-template-columns: 1fr;
+            }
+
+            .nav-links {
+                display: none;
+            }
+
+            .hero {
+                padding: 56px 0;
+            }
+
+            .footer-grid {
+                flex-direction: column;
+            }
+
+            .floating-whatsapp {
+                padding: 0 15px;
+            }
+
+        }
+
+    </style>
+</head>
+
+
+<body>
+
+
+<!-- HEADER -->
+
+<header>
+
+    <div class="container navbar">
+
+        <a
+            href="#inicio"
+            class="brand"
+        >
+            Asosciaciones Literales SAS
+        </a>
+
+        <nav class="nav-links">
+
+            <a href="#servicios">
+                Servicios
+            </a>
+
+            <a href="#seguridad">
+                Seguridad
+            </a>
+
+            <a href="#faq">
+                Preguntas frecuentes
+            </a>
+
+            <a href="#contacto">
+                Contacto
+            </a>
+
+            <a href="#legal">
+                Información legal
+            </a>
+
+        </nav>
+
+    </div>
+
+</header>
+
+
+<!-- AVISO DE INDEPENDENCIA -->
+
+<div class="top-disclaimer">
+
+    <div class="container">
+
+        <strong>
+            Aviso importante:
+        </strong>
+
+        Asosciaciones Literales SAS es un servicio
+        independiente de orientación.
+
+        No somos Visa Inc., Visa International,
+        un banco ni una entidad emisora de tarjetas.
+
+    </div>
+
+</div>
+
+
+<main>
+
+
+<!-- HERO -->
+
+<section
+    class="hero"
+    id="inicio"
+>
+
+    <div class="container hero-grid">
+
+        <div>
+
+            <span class="tag">
+                Orientación independiente
+            </span>
+
+            <h1>
+                Orientación ante inconvenientes
+                con tarjetas y pagos
+            </h1>
+
+            <p class="hero-text">
+
+                Te orientamos sobre los pasos que puedes seguir
+                ante compras rechazadas, cargos que no reconoces,
+                problemas con pagos y otras consultas generales
+                relacionadas con el uso de tarjetas.
+
+            </p>
+
+
+            <div class="buttons">
+
+                <a
+                    class="btn btn-whatsapp"
+
+                    href="https://wa.me/5493876570467?text=Consulta%20relacionada%20con%20tarjeta%20Visa"
+
+                    target="_blank"
+
+                    rel="noopener noreferrer"
+                >
+
+                    Consultar por WhatsApp
+
+                </a>
+
+
+                <a
+                    class="btn btn-secondary"
+                    href="#servicios"
+                >
+
+                    Ver información
+
+                </a>
+
+            </div>
+
+
+            <p class="hero-small">
+
+                No envíes números completos de tarjeta,
+                CVV, PIN, contraseñas bancarias,
+                tokens ni códigos recibidos por SMS.
+
+            </p>
+
+        </div>
+
+
+        <div class="hero-card">
+
+            <h2>
+                ¿Sobre qué podemos orientarte?
+            </h2>
+
+            <ul class="check-list">
+
+                <li>
+                    <span class="check">✓</span>
+                    Cargo o compra que no reconoces.
+                </li>
+
+                <li>
+                    <span class="check">✓</span>
+                    Compra o pago rechazado.
+                </li>
+
+                <li>
+                    <span class="check">✓</span>
+                    Problemas para realizar una compra.
+                </li>
+
+                <li>
+                    <span class="check">✓</span>
+                    Consulta sobre habilitación de compras.
+                </li>
+
+                <li>
+                    <span class="check">✓</span>
+                    Orientación para contactar al emisor.
+                </li>
+
+                <li>
+                    <span class="check">✓</span>
+                    Consultas generales desde Argentina y Perú.
+                </li>
+
+            </ul>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- SERVICES -->
+
+<section
+    class="services"
+    id="servicios"
+>
+
+    <div class="container">
+
+        <div class="section-title">
+
+            <h2>
+                Información y orientación
+            </h2>
+
+            <p>
+
+                Nuestro servicio busca ayudarte a identificar
+                qué pasos puedes seguir y cuándo corresponde
+                comunicarte directamente con tu banco
+                o entidad emisora.
+
+            </p>
+
+        </div>
+
+
+        <div class="cards">
+
+
+            <article class="card">
+
+                <h3>
+                    Cargo no reconocido
+                </h3>
+
+                <p>
+
+                    Información general sobre las medidas
+                    que puedes considerar si encuentras
+                    una compra o consumo que no reconoces.
+
+                </p>
+
+            </article>
+
+
+            <article class="card">
+
+                <h3>
+                    Compra rechazada
+                </h3>
+
+                <p>
+
+                    Orientación sobre causas frecuentes
+                    por las que un pago puede ser rechazado
+                    y a quién consultar.
+
+                </p>
+
+            </article>
+
+
+            <article class="card">
+
+                <h3>
+                    Compras online
+                </h3>
+
+                <p>
+
+                    Información general relacionada
+                    con pagos por Internet y
+                    compras internacionales.
+
+                </p>
+
+            </article>
+
+
+            <article class="card">
+
+                <h3>
+                    Tarjeta bloqueada
+                </h3>
+
+                <p>
+
+                    Te indicamos cómo buscar los canales
+                    oficiales de tu banco o entidad emisora.
+
+                </p>
+
+            </article>
+
+
+            <article class="card">
+
+                <h3>
+                    Movimientos de tarjeta
+                </h3>
+
+                <p>
+
+                    Orientación general para entender
+                    qué entidad debe atender determinadas
+                    consultas sobre movimientos.
+
+                </p>
+
+            </article>
+
+
+            <article class="card">
+
+                <h3>
+                    Derivación al emisor
+                </h3>
+
+                <p>
+
+                    Cuando una operación únicamente puede
+                    gestionarla tu banco, te recomendamos
+                    utilizar sus canales oficiales.
+
+                </p>
+
+            </article>
+
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- SECURITY -->
+
+<section id="seguridad">
+
+    <div class="container">
+
+        <div class="section-title">
+
+            <h2>
+                Tu información financiera es privada
+            </h2>
+
+            <p>
+
+                No necesitamos información secreta
+                de tu tarjeta para ofrecer orientación.
+
+            </p>
+
+        </div>
+
+
+        <div class="security-grid">
+
+
+            <div class="security-box danger">
+
+                <h3>
+                    Nunca solicitamos
+                </h3>
+
+                <ul>
+
+                    <li>
+                        Número completo de tarjeta.
+                    </li>
+
+                    <li>
+                        Código CVV/CVC.
+                    </li>
+
+                    <li>
+                        PIN.
+                    </li>
+
+                    <li>
+                        Contraseña bancaria.
+                    </li>
+
+                    <li>
+                        Código recibido por SMS.
+                    </li>
+
+                    <li>
+                        Token bancario.
+                    </li>
+
+                    <li>
+                        Credenciales de banca online.
+                    </li>
+
+                </ul>
+
+            </div>
+
+
+            <div class="security-box">
+
+                <h3>
+                    Si sospechas fraude
+                </h3>
+
+                <ul>
+
+                    <li>
+
+                        Contacta inmediatamente
+                        a tu banco o entidad emisora.
+
+                    </li>
+
+                    <li>
+
+                        Utiliza únicamente los teléfonos
+                        publicados en los canales oficiales
+                        de tu entidad.
+
+                    </li>
+
+                    <li>
+
+                        Si corresponde,
+                        solicita el bloqueo
+                        directamente al emisor.
+
+                    </li>
+
+                    <li>
+
+                        No compartas códigos de autenticación
+                        con terceros.
+
+                    </li>
+
+                </ul>
+
+            </div>
+
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- PROCESS -->
+
+<section class="services">
+
+    <div class="container">
+
+        <div class="section-title">
+
+            <h2>
+                Cómo funciona la orientación
+            </h2>
+
+        </div>
+
+
+        <div class="steps">
+
+
+            <div class="step">
+
+                <div class="step-number">
+                    1
+                </div>
+
+                <h3>
+                    Describe el inconveniente
+                </h3>
+
+                <p>
+
+                    Puedes indicarnos de manera general
+                    qué problema estás experimentando.
+
+                    No incluyas información confidencial.
+
+                </p>
+
+            </div>
+
+
+            <div class="step">
+
+                <div class="step-number">
+                    2
+                </div>
+
+                <h3>
+                    Recibe orientación
+                </h3>
+
+                <p>
+
+                    Te proporcionamos información general
+                    sobre posibles pasos y canales
+                    disponibles.
+
+                </p>
+
+            </div>
+
+
+            <div class="step">
+
+                <div class="step-number">
+                    3
+                </div>
+
+                <h3>
+                    Contacta al emisor cuando corresponda
+                </h3>
+
+                <p>
+
+                    Las operaciones sobre cuentas,
+                    tarjetas, bloqueos y contracargos
+                    deben ser realizadas por la entidad
+                    correspondiente.
+
+                </p>
+
+            </div>
+
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- CONTACT -->
+
+<section
+    class="contact"
+    id="contacto"
+>
+
+    <div class="container contact-content">
+
+        <h2>
+            ¿Tienes una consulta?
+        </h2>
+
+        <p>
+
+            Escríbenos por WhatsApp describiendo
+            brevemente tu situación.
+
+            No envíes información confidencial
+            de tu tarjeta ni de tu cuenta bancaria.
+
+        </p>
+
+
+        <a
+
+            class="btn btn-whatsapp"
+
+            href="https://wa.me/5493876570467?text=Consulta%20relacionada%20con%20tarjeta%20Visa"
+
+            target="_blank"
+
+            rel="noopener noreferrer"
+
+        >
+
+            WhatsApp +54 9 3876 57-0467
+
+        </a>
+
+    </div>
+
+</section>
+
+
+
+<!-- FAQ -->
+
+<section
+    class="faq"
+    id="faq"
+>
+
+    <div class="container">
+
+        <div class="section-title">
+
+            <h2>
+                Preguntas frecuentes
+            </h2>
+
+        </div>
+
+
+        <div class="faq-item">
+
+            <h3>
+                ¿Asosciaciones Literales SAS es Visa?
+            </h3>
+
+            <p>
+
+                No.
+
+                Asosciaciones Literales SAS
+                es una empresa independiente.
+
+                No somos Visa Inc.,
+                Visa International,
+                un banco ni una entidad
+                emisora de tarjetas.
+
+            </p>
+
+        </div>
+
+
+        <div class="faq-item">
+
+            <h3>
+                ¿Pueden bloquear mi tarjeta?
+            </h3>
+
+            <p>
+
+                No.
+
+                El bloqueo o desbloqueo de una tarjeta
+                corresponde al banco o entidad
+                que la emitió.
+
+            </p>
+
+        </div>
+
+
+        <div class="faq-item">
+
+            <h3>
+                ¿Pueden cancelar un cargo?
+            </h3>
+
+            <p>
+
+                No realizamos cancelaciones,
+                devoluciones ni contracargos.
+
+                Estas operaciones deben solicitarse
+                directamente a la entidad correspondiente.
+
+            </p>
+
+        </div>
+
+
+        <div class="faq-item">
+
+            <h3>
+                ¿Debo proporcionar los datos de mi tarjeta?
+            </h3>
+
+            <p>
+
+                No.
+
+                Nunca debes enviarnos el número completo
+                de tu tarjeta, CVV, PIN,
+                contraseña bancaria, token
+                ni códigos de seguridad.
+
+            </p>
+
+        </div>
+
+
+        <div class="faq-item">
+
+            <h3>
+                ¿La consulta tiene costo?
+            </h3>
+
+            <p>
+
+                La consulta inicial por WhatsApp
+                es gratuita.
+
+                En caso de ofrecerse posteriormente
+                un servicio pago,
+                su precio y condiciones
+                deberán informarse antes
+                de cualquier contratación.
+
+            </p>
+
+        </div>
+
+
+    </div>
+
+</section>
+
+
+
+<!-- LEGAL -->
+
+<section
+    class="legal"
+    id="legal"
+>
+
+    <div class="container legal-content">
+
+        <h2>
+            Información legal
+        </h2>
+
+
+        <div class="company-data">
+
+            <p>
+                <strong>
+                    Razón social:
+                </strong>
+
+                Asosciaciones Literales SAS
+            </p>
+
+
+            <p>
+                <strong>
+                    Identificación fiscal:
+                </strong>
+
+                1269857455
+            </p>
+
+
+            <p>
+                <strong>
+                    Atención Argentina:
+                </strong>
+
+                Buenos Aires, Argentina
+            </p>
+
+
+            <p>
+                <strong>
+                    Atención Perú:
+                </strong>
+
+                Lima, Perú
+            </p>
+
+
+            <!--
+            IMPORTANTE GOOGLE ADS:
+
+            REEMPLAZA ESTA PARTE
+            POR TU DOMICILIO FÍSICO REAL.
+            -->
+
+
+            <p>
+                <strong>
+                    Domicilio comercial:
+                </strong>
+BUENOS AIRES ARGENTINA 1569 TRONCALES
+
+            </p>
+
+
+            <p>
+                <strong>
+                    WhatsApp:
+                </strong>
+
+                +54 9 3876 57-0467
+            </p>
+
+
+      
+
+            <p>
+                <strong>
+                    Correo electrónico:
+                </strong>
+
+            </p>
+
+        </div>
+
+
+
+        <h3>
+            Naturaleza del servicio
+        </h3>
+
+        <p>
+
+            Asosciaciones Literales SAS
+            ofrece orientación informativa independiente
+            relacionada con consultas generales
+            sobre pagos y tarjetas.
+
+        </p>
+
+        <p>
+
+            No emitimos tarjetas,
+            no mantenemos cuentas bancarias,
+            no procesamos pagos,
+            no autorizamos operaciones,
+            no bloqueamos tarjetas
+            y no realizamos contracargos.
+
+        </p>
+
+
+
+        <h3>
+            Independencia de terceros
+        </h3>
+
+        <p>
+
+            Asosciaciones Literales SAS
+            es una empresa independiente.
+
+            No pertenece a Visa Inc.,
+            Visa International Service Association,
+            bancos, entidades financieras
+            ni emisores de tarjetas.
+
+        </p>
+
+        <p>
+
+            Las marcas comerciales mencionadas
+            pertenecen a sus respectivos propietarios.
+
+            Cualquier referencia a una marca
+            tiene finalidad descriptiva
+            para identificar el tipo de consulta
+            del usuario.
+
+        </p>
+
+
+
+        <h3>
+            Tarifas
+        </h3>
+
+        <p>
+
+            La consulta inicial mediante WhatsApp
+            es gratuita.
+
+        </p>
+
+        <p>
+
+            Si posteriormente se ofrece
+            un servicio de pago,
+            el precio total,
+            condiciones y alcance del servicio
+            se comunicarán antes
+            de cualquier contratación.
+
+        </p>
+
+
+
+        <h3 id="privacidad">
+            Política de privacidad
+        </h3>
+
+        <p>
+
+            Los datos proporcionados voluntariamente
+            por el usuario se utilizarán
+            únicamente para atender
+            su solicitud de información
+            y prestar el servicio solicitado.
+
+        </p>
+
+        <p>
+
+            No solicitamos ni necesitamos
+            números completos de tarjetas,
+            códigos CVV/CVC,
+            PIN,
+            claves bancarias,
+            códigos de autenticación
+            ni credenciales de banca online.
+
+        </p>
+
+        <p>
+
+            El usuario no debe proporcionar
+            este tipo de información
+            mediante WhatsApp,
+            correo electrónico
+            u otros canales del sitio.
+
+        </p>
+
+
+
+        <h3 id="terminos">
+            Términos de uso
+        </h3>
+
+        <p>
+
+            La información disponible
+            en este sitio tiene carácter
+            general e informativo.
+
+        </p>
+
+        <p>
+
+            Las decisiones relacionadas
+            con autorizaciones de pagos,
+            movimientos bancarios,
+            bloqueos,
+            reclamos,
+            devoluciones
+            y contracargos
+            son responsabilidad
+            de la entidad emisora
+            o institución financiera correspondiente.
+
+        </p>
+
+        <p>
+
+            Asosciaciones Literales SAS
+            no garantiza que una entidad financiera
+            apruebe una solicitud,
+            reclamo,
+            devolución
+            o gestión presentada por un usuario.
+
+        </p>
+
+
+
+        <h3>
+            Seguridad
+        </h3>
+
+        <p>
+
+            Si detectas una operación fraudulenta
+            o crees que los datos de tu tarjeta
+            han sido comprometidos,
+            debes contactar inmediatamente
+            al banco o entidad emisora
+            utilizando sus canales oficiales.
+
+        </p>
+
+
+        <h3>
+            Contacto
+        </h3>
+
+        <p>
+
+            Para consultas generales puedes comunicarte
+            con Asosciaciones Literales SAS mediante
+            WhatsApp al:
+
+            <strong>
+                +54 9 3876 57-0467
+            </strong>
+
+        </p>
+
+
+    </div>
+
+</section>
+
+
+</main>
+
+
+
+<!-- FOOTER -->
+
+<footer>
+
+    <div class="container footer-grid">
+
+        <div>
+
+            ©
+            <span id="year"></span>
+
+            Asosciaciones Literales SAS.
+
+            Todos los derechos reservados.
+
+        </div>
+
+
+        <div class="footer-links">
+
+            <a href="#privacidad">
+                Privacidad
+            </a>
+
+            <a href="#terminos">
+                Términos
+            </a>
+
+            <a href="#legal">
+                Información legal
+            </a>
+
+            <a href="#contacto">
+                Contacto
+            </a>
+
+        </div>
+
+    </div>
+
+</footer>
+
+
+
+<!-- WHATSAPP FLOTANTE -->
+
+<a
+
+    class="floating-whatsapp"
+
+    href="https://wa.me/5493876570467?text=Consulta%20relacionada%20con%20tarjeta%20Visa"
+
+    target="_blank"
+
+    rel="noopener noreferrer"
+
+    aria-label="Consultar por WhatsApp"
+
+>
+
+    WhatsApp
+
+</a>
+
+
+
+<script>
+
+    document.getElementById("year").textContent =
+        new Date().getFullYear();
+
+</script>
+
+
+</body>
+</html>
