@@ -1,0 +1,950 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Asosciaciones Literales SAS | Orientación sobre tarjetas Mastercard</title>
+
+  <meta
+    name="description"
+    content="Servicio independiente de orientación para consultas relacionadas con tarjetas Mastercard, pagos, compras y problemas de uso."
+  >
+
+  <meta name="robots" content="index,follow">
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    :root {
+      --primary: #17375e;
+      --primary-dark: #0d2743;
+      --secondary: #f5f8fc;
+      --text: #1d2939;
+      --muted: #667085;
+      --white: #ffffff;
+      --border: #dce3eb;
+      --green: #1b8f51;
+      --green-dark: #147440;
+      --warning: #fff8e8;
+      --warning-border: #ead28f;
+      --max-width: 1140px;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      background: var(--white);
+      color: var(--text);
+      line-height: 1.65;
+    }
+
+    a {
+      color: inherit;
+    }
+
+    .container {
+      width: min(92%, var(--max-width));
+      margin: 0 auto;
+    }
+
+    header {
+      background: var(--white);
+      border-bottom: 1px solid var(--border);
+      position: sticky;
+      top: 0;
+      z-index: 50;
+    }
+
+    .navbar {
+      min-height: 72px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 30px;
+    }
+
+    .brand {
+      color: var(--primary-dark);
+      font-size: 20px;
+      font-weight: 800;
+      text-decoration: none;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 22px;
+      align-items: center;
+    }
+
+    .nav-links a {
+      text-decoration: none;
+      font-size: 14px;
+      font-weight: 600;
+    }
+
+    .notice {
+      background: var(--warning);
+      border-bottom: 1px solid var(--warning-border);
+      padding: 15px 0;
+      font-size: 14px;
+    }
+
+    .notice strong {
+      color: #584a1f;
+    }
+
+    .hero {
+      padding: 86px 0;
+      background: linear-gradient(
+        135deg,
+        #f9fbff 0%,
+        #eef4fb 100%
+      );
+    }
+
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 1.15fr .85fr;
+      gap: 56px;
+      align-items: center;
+    }
+
+    .tag {
+      display: inline-block;
+      background: #e7f0fa;
+      color: var(--primary);
+      border-radius: 100px;
+      padding: 7px 14px;
+      font-size: 13px;
+      font-weight: 700;
+      margin-bottom: 18px;
+    }
+
+    h1 {
+      color: var(--primary-dark);
+      font-size: clamp(36px, 5vw, 58px);
+      line-height: 1.08;
+      letter-spacing: -1.4px;
+      margin-bottom: 22px;
+    }
+
+    .hero-text {
+      color: var(--muted);
+      font-size: 18px;
+      max-width: 700px;
+      margin-bottom: 28px;
+    }
+
+    .btn {
+      min-height: 52px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 0 24px;
+      border-radius: 9px;
+      text-decoration: none;
+      font-weight: 700;
+      transition: .2s ease;
+    }
+
+    .btn-whatsapp {
+      background: var(--green);
+      color: var(--white);
+    }
+
+    .btn-whatsapp:hover {
+      background: var(--green-dark);
+      transform: translateY(-1px);
+    }
+
+    .small-text {
+      margin-top: 14px;
+      font-size: 13px;
+      color: var(--muted);
+    }
+
+    .hero-card {
+      background: var(--white);
+      border: 1px solid var(--border);
+      border-radius: 18px;
+      padding: 30px;
+      box-shadow: 0 20px 60px rgba(17, 45, 75, .08);
+    }
+
+    .hero-card h2 {
+      font-size: 23px;
+      color: var(--primary-dark);
+      margin-bottom: 18px;
+    }
+
+    .check-list {
+      list-style: none;
+      display: grid;
+      gap: 14px;
+    }
+
+    .check-list li {
+      display: flex;
+      gap: 10px;
+      color: var(--muted);
+    }
+
+    .check {
+      color: var(--green);
+      font-weight: 800;
+    }
+
+    section {
+      padding: 76px 0;
+    }
+
+    .section-title {
+      max-width: 760px;
+      margin-bottom: 38px;
+    }
+
+    .section-title h2 {
+      font-size: clamp(30px, 4vw, 42px);
+      line-height: 1.2;
+      color: var(--primary-dark);
+      margin-bottom: 12px;
+    }
+
+    .section-title p {
+      color: var(--muted);
+      font-size: 17px;
+    }
+
+    .services {
+      background: var(--secondary);
+    }
+
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+    }
+
+    .card {
+      background: var(--white);
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      padding: 26px;
+    }
+
+    .card h3 {
+      color: var(--primary-dark);
+      font-size: 19px;
+      margin-bottom: 9px;
+    }
+
+    .card p {
+      color: var(--muted);
+      font-size: 15px;
+    }
+
+    .security-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 24px;
+    }
+
+    .security-box {
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      padding: 28px;
+    }
+
+    .security-box h3 {
+      color: var(--primary-dark);
+      margin-bottom: 14px;
+    }
+
+    .security-box ul {
+      padding-left: 20px;
+      color: var(--muted);
+    }
+
+    .security-box li {
+      margin-bottom: 9px;
+    }
+
+    .contact {
+      background: var(--primary-dark);
+      color: var(--white);
+    }
+
+    .contact-inner {
+      text-align: center;
+      max-width: 780px;
+      margin: auto;
+    }
+
+    .contact h2 {
+      font-size: clamp(30px, 4vw, 42px);
+      margin-bottom: 14px;
+    }
+
+    .contact p {
+      color: #d8e4ef;
+      font-size: 17px;
+      margin-bottom: 25px;
+    }
+
+    .faq {
+      background: var(--secondary);
+    }
+
+    .faq-item {
+      background: var(--white);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 23px;
+      margin-bottom: 14px;
+    }
+
+    .faq-item h3 {
+      color: var(--primary-dark);
+      margin-bottom: 7px;
+      font-size: 17px;
+    }
+
+    .faq-item p {
+      color: var(--muted);
+      font-size: 15px;
+    }
+
+    .legal-content {
+      max-width: 900px;
+    }
+
+    .legal-content h2 {
+      color: var(--primary-dark);
+      font-size: 30px;
+      margin-bottom: 20px;
+    }
+
+    .legal-content h3 {
+      color: var(--primary-dark);
+      margin-top: 28px;
+      margin-bottom: 9px;
+    }
+
+    .legal-content p {
+      color: var(--muted);
+      font-size: 14px;
+      margin-bottom: 12px;
+    }
+
+    .company-data {
+      background: var(--secondary);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 24px;
+      margin: 20px 0;
+    }
+
+    footer {
+      background: #0a1725;
+      color: #cdd6df;
+      padding: 34px 0;
+    }
+
+    .footer-grid {
+      display: flex;
+      justify-content: space-between;
+      gap: 30px;
+      font-size: 13px;
+    }
+
+    .footer-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 15px;
+    }
+
+    .footer-links a {
+      color: white;
+    }
+
+    .floating-whatsapp {
+      position: fixed;
+      right: 20px;
+      bottom: 20px;
+      min-width: 58px;
+      height: 58px;
+      padding: 0 18px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 100px;
+      background: var(--green);
+      color: var(--white);
+      text-decoration: none;
+      font-size: 14px;
+      font-weight: bold;
+      box-shadow: 0 8px 24px rgba(0,0,0,.20);
+      z-index: 100;
+    }
+
+    @media (max-width: 850px) {
+      .hero-grid,
+      .security-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .cards {
+        grid-template-columns: 1fr;
+      }
+
+      .nav-links {
+        display: none;
+      }
+
+      .hero {
+        padding: 56px 0;
+      }
+
+      .footer-grid {
+        flex-direction: column;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+<header>
+  <div class="container navbar">
+
+    <a href="#inicio" class="brand">
+      Asosciaciones Literales SAS
+    </a>
+
+    <nav class="nav-links">
+      <a href="#servicios">Orientación</a>
+      <a href="#seguridad">Seguridad</a>
+      <a href="#faq">Preguntas frecuentes</a>
+      <a href="#legal">Información legal</a>
+      <a href="#contacto">Contacto</a>
+    </nav>
+
+  </div>
+</header>
+
+
+<div class="notice">
+  <div class="container">
+    <strong>Aviso importante:</strong>
+    Asosciaciones Literales SAS es un servicio independiente de
+    orientación. No somos Mastercard, Mastercard Incorporated,
+    un banco ni una entidad emisora de tarjetas.
+  </div>
+</div>
+
+
+<main>
+
+<section class="hero" id="inicio">
+
+  <div class="container hero-grid">
+
+    <div>
+
+      <span class="tag">
+        Orientación independiente
+      </span>
+
+      <h1>
+        Consultas relacionadas con tarjetas Mastercard
+      </h1>
+
+      <p class="hero-text">
+        Brindamos orientación independiente sobre inconvenientes
+        relacionados con pagos, compras rechazadas, cargos no reconocidos
+        y otras consultas generales sobre el uso de tarjetas Mastercard.
+      </p>
+
+      <a
+        class="btn btn-whatsapp"
+        href="https://wa.me/5493876570467?text=Hola%2C%20tengo%20una%20consulta%20con%20mi%20tarjeta%20Mastercard"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        Consultar por WhatsApp
+      </a>
+
+      <p class="small-text">
+        No envíes el número completo de tu tarjeta, CVV, PIN,
+        contraseñas bancarias ni códigos recibidos por SMS.
+      </p>
+
+    </div>
+
+
+    <div class="hero-card">
+
+      <h2>
+        Podemos orientarte sobre:
+      </h2>
+
+      <ul class="check-list">
+
+        <li>
+          <span class="check">✓</span>
+          Cargo o compra que no reconoces.
+        </li>
+
+        <li>
+          <span class="check">✓</span>
+          Compra o pago rechazado.
+        </li>
+
+        <li>
+          <span class="check">✓</span>
+          Problemas al realizar compras.
+        </li>
+
+        <li>
+          <span class="check">✓</span>
+          Consultas sobre compras por Internet.
+        </li>
+
+        <li>
+          <span class="check">✓</span>
+          Orientación para contactar a tu entidad emisora.
+        </li>
+
+        <li>
+          <span class="check">✓</span>
+          Consultas generales sobre tarjetas Mastercard.
+        </li>
+
+      </ul>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<section class="services" id="servicios">
+
+  <div class="container">
+
+    <div class="section-title">
+
+      <h2>
+        Orientación sobre tarjetas Mastercard
+      </h2>
+
+      <p>
+        Te ayudamos a identificar qué pasos puedes seguir
+        y cuándo corresponde comunicarte directamente con
+        tu banco o entidad emisora.
+      </p>
+
+    </div>
+
+
+    <div class="cards">
+
+      <article class="card">
+        <h3>Cargo no reconocido</h3>
+        <p>
+          Información general sobre qué hacer cuando aparece
+          un movimiento o compra que no reconoces.
+        </p>
+      </article>
+
+
+      <article class="card">
+        <h3>Compra rechazada</h3>
+        <p>
+          Orientación sobre posibles causas por las que
+          una compra puede ser rechazada.
+        </p>
+      </article>
+
+
+      <article class="card">
+        <h3>Compras por Internet</h3>
+        <p>
+          Información general relacionada con operaciones
+          online y compras internacionales.
+        </p>
+      </article>
+
+
+      <article class="card">
+        <h3>Tarjeta bloqueada</h3>
+        <p>
+          Información para identificar los canales oficiales
+          de tu banco o entidad emisora.
+        </p>
+      </article>
+
+
+      <article class="card">
+        <h3>Problemas de pago</h3>
+        <p>
+          Orientación general si estás experimentando
+          inconvenientes al realizar una operación.
+        </p>
+      </article>
+
+
+      <article class="card">
+        <h3>Contacto con el emisor</h3>
+        <p>
+          Cuando la gestión debe realizarla directamente tu banco,
+          te orientamos para buscar sus canales oficiales.
+        </p>
+      </article>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<section id="seguridad">
+
+  <div class="container">
+
+    <div class="section-title">
+
+      <h2>
+        Protege tus datos financieros
+      </h2>
+
+      <p>
+        Para recibir orientación no necesitas compartir
+        información confidencial de tu tarjeta.
+      </p>
+
+    </div>
+
+
+    <div class="security-grid">
+
+      <div class="security-box">
+
+        <h3>Nunca te solicitaremos</h3>
+
+        <ul>
+          <li>Número completo de tarjeta.</li>
+          <li>Código CVV/CVC.</li>
+          <li>PIN.</li>
+          <li>Contraseña bancaria.</li>
+          <li>Códigos recibidos por SMS.</li>
+          <li>Token de seguridad.</li>
+          <li>Credenciales de banca online.</li>
+        </ul>
+
+      </div>
+
+
+      <div class="security-box">
+
+        <h3>Si sospechas fraude</h3>
+
+        <ul>
+          <li>
+            Contacta inmediatamente a tu banco o entidad emisora.
+          </li>
+
+          <li>
+            Utiliza los teléfonos publicados en los canales
+            oficiales de tu entidad.
+          </li>
+
+          <li>
+            Solicita directamente al emisor el bloqueo de la
+            tarjeta cuando corresponda.
+          </li>
+
+          <li>
+            Nunca compartas códigos de autenticación.
+          </li>
+        </ul>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<section class="contact" id="contacto">
+
+  <div class="container contact-inner">
+
+    <h2>
+      ¿Tienes una consulta sobre tu tarjeta Mastercard?
+    </h2>
+
+    <p>
+      Escríbenos por WhatsApp describiendo brevemente tu consulta.
+      No envíes información confidencial de tu tarjeta.
+    </p>
+
+    <a
+      class="btn btn-whatsapp"
+      href="https://wa.me/5493876570467?text=Hola%2C%20tengo%20una%20consulta%20con%20mi%20tarjeta%20Mastercard"
+      target="_blank"
+      rel="noopener noreferrer"
+    >
+      WhatsApp +54 9 3876 57-0467
+    </a>
+
+  </div>
+
+</section>
+
+
+<section class="faq" id="faq">
+
+  <div class="container">
+
+    <div class="section-title">
+      <h2>Preguntas frecuentes</h2>
+    </div>
+
+
+    <div class="faq-item">
+
+      <h3>
+        ¿Asosciaciones Literales SAS es Mastercard?
+      </h3>
+
+      <p>
+        No. Asosciaciones Literales SAS es una empresa independiente.
+        No somos Mastercard Incorporated, una entidad bancaria
+        ni un emisor de tarjetas.
+      </p>
+
+    </div>
+
+
+    <div class="faq-item">
+
+      <h3>
+        ¿Pueden bloquear o desbloquear mi tarjeta?
+      </h3>
+
+      <p>
+        No. Estas operaciones deben ser realizadas directamente
+        por el banco o entidad emisora de la tarjeta.
+      </p>
+
+    </div>
+
+
+    <div class="faq-item">
+
+      <h3>
+        ¿Pueden cancelar una compra?
+      </h3>
+
+      <p>
+        No realizamos cancelaciones, devoluciones ni contracargos.
+        Estas gestiones corresponden al banco o emisor.
+      </p>
+
+    </div>
+
+
+    <div class="faq-item">
+
+      <h3>
+        ¿Debo enviar los datos completos de mi Mastercard?
+      </h3>
+
+      <p>
+        No. Nunca envíes el número completo de la tarjeta,
+        CVV, PIN, contraseñas, tokens o códigos de seguridad.
+      </p>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<section id="legal">
+
+  <div class="container legal-content">
+
+    <h2>
+      Información legal
+    </h2>
+
+
+    <div class="company-data">
+
+      <p>
+        <strong>Razón social:</strong>
+        Asosciaciones Literales SAS
+      </p>
+
+      <p>
+        <strong>Identificación fiscal:</strong>
+        1269857455
+      </p>
+
+      <p>
+        <strong>Atención Argentina:</strong>
+        Buenos Aires, Argentina
+      </p>
+
+      <p>
+        <strong>Atención Perú:</strong>
+        Lima, Perú
+      </p>
+
+      <p>
+        <strong>Domicilio comercial:</strong>
+        DOMICILIO COMPLETO REAL AQUÍ
+      </p>
+
+      <p>
+        <strong>WhatsApp:</strong>
+        +54 9 3876 57-0467
+      </p>
+
+      <p>
+        <strong>Correo electrónico:</strong>
+        contacto@TU-DOMINIO.com
+      </p>
+
+    </div>
+
+
+    <h3>Naturaleza del servicio</h3>
+
+    <p>
+      Asosciaciones Literales SAS ofrece un servicio independiente
+      de información y orientación para consultas generales
+      relacionadas con tarjetas y medios de pago.
+    </p>
+
+    <p>
+      No emitimos tarjetas, no administramos cuentas bancarias,
+      no procesamos pagos, no autorizamos operaciones y
+      no realizamos bloqueos, devoluciones ni contracargos.
+    </p>
+
+
+    <h3>Independencia respecto de Mastercard</h3>
+
+    <p>
+      Asosciaciones Literales SAS no pertenece a Mastercard
+      Incorporated y no afirma representar ni actuar en nombre
+      de Mastercard, bancos o entidades emisoras.
+    </p>
+
+    <p>
+      Mastercard y las demás marcas mencionadas pertenecen
+      a sus respectivos propietarios. Las referencias a Mastercard
+      se utilizan únicamente para describir el tipo de consulta
+      realizada por el usuario.
+    </p>
+
+
+    <h3>Privacidad</h3>
+
+    <p>
+      Los datos proporcionados voluntariamente se utilizarán
+      para responder a la consulta del usuario.
+    </p>
+
+    <p>
+      No solicitamos números completos de tarjetas,
+      códigos CVV/CVC, PIN, contraseñas bancarias,
+      tokens ni códigos de autenticación.
+    </p>
+
+
+    <h3>Costos</h3>
+
+    <p>
+      La consulta inicial mediante WhatsApp es gratuita.
+      Si posteriormente se ofreciera un servicio pago,
+      el precio y sus condiciones deberán ser comunicados
+      antes de cualquier contratación.
+    </p>
+
+
+    <h3>Términos de uso</h3>
+
+    <p>
+      La información proporcionada por este sitio tiene carácter
+      general e informativo.
+    </p>
+
+    <p>
+      Las decisiones relacionadas con pagos, autorizaciones,
+      bloqueos, devoluciones, reclamos y contracargos corresponden
+      a la entidad emisora o institución financiera correspondiente.
+    </p>
+
+  </div>
+
+</section>
+
+</main>
+
+
+<footer>
+
+  <div class="container footer-grid">
+
+    <div>
+      © <span id="year"></span>
+      Asosciaciones Literales SAS.
+      Todos los derechos reservados.
+    </div>
+
+    <div class="footer-links">
+      <a href="#legal">Información legal</a>
+      <a href="#seguridad">Seguridad</a>
+      <a href="#contacto">Contacto</a>
+    </div>
+
+  </div>
+
+</footer>
+
+
+<a
+  class="floating-whatsapp"
+  href="https://wa.me/5493876570467?text=Hola%2C%20tengo%20una%20consulta%20con%20mi%20tarjeta%20Mastercard"
+  target="_blank"
+  rel="noopener noreferrer"
+  aria-label="Consultar por WhatsApp"
+>
+  WhatsApp
+</a>
+
+
+<script>
+  document.getElementById("year").textContent =
+    new Date().getFullYear();
+</script>
+
+</body>
+</html>
